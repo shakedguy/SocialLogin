@@ -1,4 +1,7 @@
 import { registerRootComponent } from 'expo';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['new NativeEventEmitter']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 import App from './App';
 

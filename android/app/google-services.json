@@ -1,0 +1,55 @@
+{
+	"project_info": {
+		"project_number": "795993175585",
+		"firebase_url": "https://react-login-bd9ed-default-rtdb.firebaseio.com",
+		"project_id": "react-login-bd9ed",
+		"storage_bucket": "react-login-bd9ed.appspot.com"
+	},
+	"client": [
+		{
+			"client_info": {
+				"mobilesdk_app_id": "1:795993175585:android:ad6005ceb6399ef099d560",
+				"android_client_info": {
+					"package_name": "com.loginapp.appname"
+				}
+			},
+			"oauth_client": [
+				{
+					"client_id": "795993175585-5b1f9rms89ul7eno4o8hev29qf270mph.apps.googleusercontent.com",
+					"client_type": 1,
+					"android_info": {
+						"package_name": "com.loginapp.appname",
+						"certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+					}
+				},
+				{
+					"client_id": "795993175585-h6orle0prmh7lspkh18o3a69si0h95b1.apps.googleusercontent.com",
+					"client_type": 3
+				}
+			],
+			"api_key": [
+				{
+					"current_key": "AIzaSyDf2ztmTGmQLRIEzQfp4l7Vjfl1pYXMKYM"
+				}
+			],
+			"services": {
+				"appinvite_service": {
+					"other_platform_oauth_client": [
+						{
+							"client_id": "795993175585-h6orle0prmh7lspkh18o3a69si0h95b1.apps.googleusercontent.com",
+							"client_type": 3
+						},
+						{
+							"client_id": "795993175585-1834jo39o1onrur0c46iuiu9atp2i5ar.apps.googleusercontent.com",
+							"client_type": 2,
+							"ios_info": {
+								"bundle_id": "org.reactjs.native.example.MobileApp"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"configuration_version": "1"
+}

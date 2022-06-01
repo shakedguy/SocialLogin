@@ -45,5 +45,11 @@ target 'SocialLogin' do
       Pod::UI.warn e
     end
   end
+pod 'Firebase/Analytics'
+pod 'FirebaseUI'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Google'
+pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+pod 'FirebaseUI/Phone'
 
 end
