@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, StatusBar, View, ImageBackground } from 'react-native';
+import { StyleSheet, StatusBar, View } from 'react-native';
 import ProfileCard from '../components/ProfileCard';
 import { useAuth } from '../contexts/AuthContext';
 
