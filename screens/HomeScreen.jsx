@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, SafeAreaView, ImageBackground, Dimensions } from 'react-native';
+import { StyleSheet, View, SafeAreaView, StatusBar, Dimensions } from 'react-native';
 import { Button, Title, Snackbar } from 'react-native-paper';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -18,31 +18,30 @@ const HomeScreen = ({ route }) => {
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<ImageBackground source={require('../assets/auth_icon3x.png')} style={styles.backgroundImg}>
-				<View style={styles.upsideContainer}>
-					<View style={styles.snackbarContainer}>
-						<Snackbar style={styles.snackbar} visible={visible} onDismiss={onDismissSnackBar} duration={3000}>
-							Goodbye 👋🙃
-						</Snackbar>
-					</View>
-					<Title style={styles.title}>Hello, Welcome to Social Login App</Title>
+			<StatusBar barStyle='dark-content' />
+			<View style={styles.upsideContainer}>
+				<View style={styles.snackbarContainer}>
+					<Snackbar style={styles.snackbar} visible={visible} onDismiss={onDismissSnackBar} duration={3000}>
+						Goodbye 👋🙃
+					</Snackbar>
 				</View>
-				<View style={styles.downsideContainer}>
-					<View style={styles.emptyBox} />
-					<View style={styles.buttonContainer}>
-						<Button
-							style={styles.button}
-							labelStyle={styles.label}
-							color='#0077b6'
-							mode='contained'
-							uppercase={false}
-							loading={isLoading}
-							onPress={login}>
-							Login
-						</Button>
-					</View>
+				<Title style={styles.title}>Hello, Welcome to Social Login App</Title>
+			</View>
+			<View style={styles.downsideContainer}>
+				<View style={styles.emptyBox} />
+				<View style={styles.buttonContainer}>
+					<Button
+						style={styles.button}
+						labelStyle={styles.label}
+						color='#0077b6'
+						mode='contained'
+						uppercase={false}
+						loading={isLoading}
+						onPress={login}>
+						Login
+					</Button>
 				</View>
-			</ImageBackground>
+			</View>
 		</SafeAreaView>
 	);
 };

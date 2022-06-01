@@ -2,12 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Linking, ScrollView } from 'react-native';
 import axios from 'axios';
 import { DataTable, Card, Button, Paragraph } from 'react-native-paper';
-import ListItem from '../components/ListItem';
-
-// const getMenu = async () => {
-// 	const response = await axios.get('http://www.socialloginproject.com/api/menu');
-// 	console.log(response.data);
-// };
 
 const getUsersFromBackend = async () => {
 	try {
@@ -48,7 +42,9 @@ const UsersScreen = () => {
 	if (!users) {
 		return (
 			<View style={styles.container}>
-				<Text>Loading...</Text>
+				<ImageBackground source={require('../assets/auth_icon3x.png')} style={styles.backgroundImg}>
+					<Text>Loading...</Text>
+				</ImageBackground>
 			</View>
 		);
 	} else {

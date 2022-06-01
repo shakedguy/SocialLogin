@@ -10,9 +10,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-SocialLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-SocialLogin.a */; };
 		9D27BCC02847D8A3002AF879 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D27BCBF2847D8A3002AF879 /* GoogleService-Info.plist */; };
+		9D672CF92847F063008D6FD4 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D672CF82847F063008D6FD4 /* SplashScreen.storyboard */; };
+		9D672CFB2847F098008D6FD4 /* Development in Resources */ = {isa = PBXBuildFile; fileRef = 9D672CFA2847F098008D6FD4 /* Development */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
@@ -30,7 +31,8 @@
 		7A4D352CD337FB3A3BF06240 /* Pods-SocialLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.release.xcconfig"; path = "Target Support Files/Pods-SocialLogin/Pods-SocialLogin.release.xcconfig"; sourceTree = "<group>"; };
 		9D27BCBE2847D873002AF879 /* SocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SocialLogin.entitlements; path = SocialLogin/SocialLogin.entitlements; sourceTree = "<group>"; };
 		9D27BCBF2847D8A3002AF879 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SocialLogin/SplashScreen.storyboard; sourceTree = "<group>"; };
+		9D672CF82847F063008D6FD4 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SocialLogin/SplashScreen.storyboard; sourceTree = "<group>"; };
+		9D672CFA2847F098008D6FD4 /* Development */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Development; path = ../..; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SocialLogin/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		13B07FAE1A68108700A75B9A /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				9D672CF82847F063008D6FD4 /* SplashScreen.storyboard */,
+				9D672CFA2847F098008D6FD4 /* Development */,
 				9D27BCBE2847D873002AF879 /* SocialLogin.entitlements */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -59,7 +63,6 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
 			);
 			name = SocialLogin;
 			sourceTree = "<group>";
@@ -202,9 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				9D672CF92847F063008D6FD4 /* SplashScreen.storyboard in Resources */,
+				9D672CFB2847F098008D6FD4 /* Development in Resources */,
 				9D27BCC02847D8A3002AF879 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

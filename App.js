@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { StyleSheet, StatusBar } from 'react-native';
 import AuthContextProvider from './contexts/AuthContext';
 import { NavigationContainer } from '@react-navigation/native';
 import analytics from '@react-native-firebase/analytics';
@@ -9,6 +9,17 @@ import ProfileScreen from './screens/ProfileScreen';
 import LogoutScreen from './screens/LogoutScreen';
 import UsersScreen from './screens/UsersScreen';
 import { useAuth } from './contexts/AuthContext';
+import { Asset } from 'expo-asset';
+import AppLoading from 'expo-app-loading';
+
+const cacheResourcesAsync = async () => {
+	const images = [require('./assets/auth_icon3x.png')];
+
+	const cacheImages = images.map((image) => {
+		return Asset.fromModule(image).downloadAsync();
+	});
+	return Promise.all(cacheImages);
+};
 
 const Drawer = createDrawerNavigator();
 
@@ -33,8 +44,12 @@ const MyDrawer = () => {
 };
 
 const App = () => {
+	const [isReady, setIsReady] = useState(false);
 	const routeNameRef = useRef();
 	const navigationRef = useRef();
+	if (!isReady) {
+		return <AppLoading startAsync={cacheResourcesAsync} onFinish={() => setIsReady(true)} onError={console.warn} />;
+	}
 	return (
 		<NavigationContainer
 			ref={navigationRef}
@@ -54,6 +69,7 @@ const App = () => {
 				routeNameRef.current = currentRouteName;
 			}}>
 			<AuthContextProvider>
+				<StatusBar barStyle='light-content' />
 				<MyDrawer />
 			</AuthContextProvider>
 		</NavigationContainer>
@@ -61,40 +77,13 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-	container: {
+	backgroundImg: {
 		flex: 1,
-		alignContent: 'center',
-		alignItems: 'center',
+		resizeMode: 'cover',
 		justifyContent: 'center',
-	},
-	sectionTitle: {
-		fontSize: 24,
-		fontWeight: '600',
-	},
-	sectionDescription: {
-		marginTop: 8,
-		fontSize: 18,
-		fontWeight: '400',
-	},
-	highlight: {
-		fontWeight: '700',
-	},
-	drawerTitleContainer: {
-		width: '100%',
-		textAlign: 'center',
-		alignContent: 'center',
 		alignItems: 'center',
-		justifyContent: 'center',
-		//blue color #5fa8d3
-	},
-	drawerTitleText: {
-		fontSize: 24,
-		fontWeight: '600',
-	},
-	drawerContent: {
-		width: '60%',
-		paddingHorizontal: 5,
-		paddingVertical: 30,
+		width: window.width,
+		opacity: 0.9,
 	},
 });
 
