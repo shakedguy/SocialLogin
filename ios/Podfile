@@ -45,6 +45,8 @@ target 'SocialLogin' do
       Pod::UI.warn e
     end
   end
+
+  
 pod 'Firebase/Analytics'
 pod 'FirebaseUI'
 pod 'FirebaseUI/Auth'

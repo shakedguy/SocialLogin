@@ -1,8 +1,13 @@
 {
-	"expo": {
-		"name": "SocialLogin",
-		"slug": "SocialLogin",
-		"version": "1.0.0",
-		"assetBundlePatterns": ["**/*"]
-	}
+  "expo": {
+    "name": "SocialLogin",
+    "slug": "SocialLogin",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.loginapp.appname"
+    }
+  }
 }
